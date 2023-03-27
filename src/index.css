@@ -1,0 +1,31 @@
+@charset "utf-8";
+:root {
+  font-size: 62.5%;
+  font-family: "nsn" !important;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4 {
+  height: 0;
+}
+em {
+  font-style: normal;
+}
