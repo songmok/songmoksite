@@ -1,34 +1,41 @@
 export type GnbDataType = {
   id: number;
-  name: "";
+  name: string;
 };
 export const GnbData = [
   {
+    id: 0,
+    name: "SUTABUCKS",
+    link: "/sutabucks",
+  },
+  {
     id: 1,
-    name: "SUTABUCK",
+    name: "GGOBOOK",
+    link: "ggobook",
   },
   {
     id: 2,
-    name: "GGOBOOK",
+    name: "METHEDU",
+    link: "methedu",
   },
   {
     id: 3,
-    name: "METHEDU",
+    name: "binggrae",
+    link: "binggrae",
   },
   {
     id: 4,
-    name: "클론코딩",
+    name: "hansalim",
+    link: "hansalim",
   },
   {
     id: 5,
-    name: "클론코딩",
+    name: "추가예정",
+    link: "TODO",
   },
   {
     id: 6,
-    name: "클론코딩",
-  },
-  {
-    id: 7,
-    name: "클론코딩",
+    name: "추가예정",
+    link: "",
   },
 ];

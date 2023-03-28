@@ -20,19 +20,25 @@ export interface WorkProps {
   link?: string;
   mainFuntion: string;
   ps?: string;
-  startDate: string;
-  endDate: string;
+  startDate?: string;
+  endDate?: string;
+  myWorks: string;
+  embed: boolean;
+  study: boolean;
 }
 
 const WorkLayOut = (props: WorkProps) => {
   const {
     headerText,
     headerLink,
+    study,
     project,
     link,
+    embed,
     video,
     mainFuntion,
     ps,
+    myWorks,
     startDate,
     endDate,
   } = props;
@@ -42,7 +48,17 @@ const WorkLayOut = (props: WorkProps) => {
       <Header headerText={headerText} headerLink={headerLink} />
       <WorkCss>
         <div className="c1">
-          <video src={video} className="video" autoPlay muted></video>
+          {video && (
+            <video src={video} className="video" autoPlay muted></video>
+          )}
+          {embed && (
+            <iframe
+              title={headerText}
+              src={`https://replit.com/@songmok/${headerLink}?embed=1`}
+              width="800"
+              height="750"
+            />
+          )}
         </div>
         <div className="c2">
           <ul>
@@ -53,100 +69,242 @@ const WorkLayOut = (props: WorkProps) => {
                 <img src={github} alt="" />
               </Link>
             </li>
-            <li>
-              <span className="projectHeader">주요 기능 -</span>
-              <span className="mfText">
-                {mainFuntion}
-                <b className="ps">{ps}</b>
-              </span>
-            </li>
-            <li>
-              <span className="projectHeader">담당 역할 -</span>
-              <span className="myWorks">
-                홈, 헤더, 서브헤더, 이벤트, 공지사항, 페이지 구현, 인터렉티브 및
-                UI 구성
-              </span>
-            </li>
-            <li>
-              <span className="projectHeader">프로젝트 기간 -</span>
-              <div className="dayz">
-                <span>{startDate}</span>
-                <span> ~ </span>
-                <span>{endDate}</span>
-              </div>
-            </li>
-            <li>
-              <span className="projectHeader imgheader">사용 기술 -</span>
-              <ul className="stacks">
-                {project === "SUTABUCKS" ? (
-                  <>
-                    <li>
-                      <img src={hjc} alt="" />
-                      <span>HTML/CSS/JS</span>
-                    </li>
-                    <li>
-                      <img src={cssinjs} alt="" />
-                      <span>STYLED-COMPONENTS</span>
-                    </li>
-                    <li>
-                      <img src={react} alt="" />
-                      <span>REACT</span>
-                    </li>
-                    <li>
-                      <img src={redux} alt="" />
-                      <span>REDUX</span>
-                    </li>
-                  </>
-                ) : (
-                  ""
-                )}
-                {project === "GGOBOOK" ? (
-                  <>
-                    <li>
-                      <img src={hjc} alt="" />
-                      <span>HTML/CSS/JS</span>
-                    </li>
-                    <li>
-                      <img src={cssinjs} alt="" />
-                      <span>STYLED-COMPONENTS</span>
-                    </li>
-                    <li>
-                      <img src={react} alt="" />
-                      <span>REACT</span>
-                    </li>
-                    <li>
-                      <img src={redux} alt="" />
-                      <span>REDUX</span>
-                    </li>
-                  </>
-                ) : (
-                  ""
-                )}
-              </ul>
-            </li>
-            <li>
-              <span className="projectHeader imgheader">협업 툴 -</span>
-              <ul className="teamwork">
-                {project === "SUTABUCKS" ? (
-                  <>
-                    <li>
-                      <img src={notion} alt="" />
-                      <span>NOTION</span>
-                    </li>
-                    <li>
-                      <img src={slack} alt="" />
-                      <span>SLACK</span>
-                    </li>
-                    <li>
-                      <img src={github} alt="" />
-                      <span>GITHUB</span>
-                    </li>
-                  </>
-                ) : (
-                  ""
-                )}
-              </ul>
-            </li>
+            {study === true ? (
+              <>
+                <li>
+                  <span className="projectHeader">주요 기능 -</span>
+                  <span className="mfText">
+                    {mainFuntion}
+                    <b className="ps">{ps}</b>
+                  </span>
+                </li>
+                <li>
+                  <span className="projectHeader">스터디 내용 -</span>
+                  <span className="myWorks">{myWorks}</span>
+                </li>
+                <li>
+                  <span className="projectHeader imgheader">사용 기술 -</span>
+                  <ul className="stacks">
+                    {project === "HANSALIM" ? (
+                      <>
+                        <li>
+                          <img src={hjc} alt="" />
+                          <span>HTML/CSS/JS</span>
+                        </li>
+                        <li>
+                          <img src={scss} alt="" />
+                          <span>SCSS</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </ul>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <span className="projectHeader">주요 기능 -</span>
+                  <span className="mfText">
+                    {mainFuntion}
+                    <b className="ps">{ps}</b>
+                  </span>
+                </li>
+                <li>
+                  <span className="projectHeader">담당 역할 -</span>
+                  <span className="myWorks">{myWorks}</span>
+                </li>
+                <li>
+                  {startDate && (
+                    <>
+                      <span className="projectHeader">프로젝트 기간 -</span>
+                      <div className="dayz">
+                        <span>{startDate}</span>
+                        <span> ~ </span>
+                        <span>{endDate}</span>
+                      </div>
+                    </>
+                  )}
+                </li>
+                <li>
+                  <span className="projectHeader imgheader">사용 기술 -</span>
+                  <ul className="stacks">
+                    {project === "SUTABUCKS" ? (
+                      <>
+                        <li>
+                          <img src={hjc} alt="" />
+                          <span>HTML/CSS/JS</span>
+                        </li>
+                        <li>
+                          <img src={cssinjs} alt="" />
+                          <span>STYLED-COMPONENTS</span>
+                        </li>
+                        <li>
+                          <img src={react} alt="" />
+                          <span>REACT</span>
+                        </li>
+                        <li>
+                          <img src={redux} alt="" />
+                          <span>REDUX</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    {project === "GGOBOOK" ? (
+                      <>
+                        <li>
+                          <img src={hjc} alt="" />
+                          <span>HTML/CSS/JS</span>
+                        </li>
+                        <li>
+                          <img src={cssinjs} alt="" />
+                          <span>STYLED-COMPONENTS</span>
+                        </li>
+                        <li>
+                          <img src={react} alt="" />
+                          <span>REACT</span>
+                        </li>
+                        <li>
+                          <img src={redux} alt="" />
+                          <span>REDUX</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    {project === "METHEDU" ? (
+                      <>
+                        <li>
+                          <img src={hjc} alt="" />
+                          <span>HTML/CSS/JS</span>
+                        </li>
+                        <li>
+                          <img src={cssinjs} alt="" />
+                          <span>STYLED-COMPONENTS</span>
+                        </li>
+                        <li>
+                          <img src={react} alt="" />
+                          <span>REACT</span>
+                        </li>
+                        <li>
+                          <img src={redux} alt="" />
+                          <span>REDUX</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}{" "}
+                    {project === "BINGGRAE" ? (
+                      <>
+                        <li>
+                          <img src={hjc} alt="" />
+                          <span>HTML/CSS/JS</span>
+                        </li>
+                        <li>
+                          <img src={scss} alt="" />
+                          <span>SCSS</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    {project === "HANSALIM" ? (
+                      <>
+                        <li>
+                          <img src={hjc} alt="" />
+                          <span>HTML/CSS/JS</span>
+                        </li>
+                        <li>
+                          <img src={scss} alt="" />
+                          <span>SCSS</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </ul>
+                </li>
+                <li>
+                  <span className="projectHeader imgheader">협업 툴 -</span>
+                  <ul className="teamwork">
+                    {project === "SUTABUCKS" ? (
+                      <>
+                        <li>
+                          <img src={notion} alt="" />
+                          <span>NOTION</span>
+                        </li>
+                        <li>
+                          <img src={slack} alt="" />
+                          <span>SLACK</span>
+                        </li>
+                        <li>
+                          <img src={github} alt="" />
+                          <span>GITHUB</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    {project === "GGOBOOK" ? (
+                      <>
+                        <li>
+                          <img src={notion} alt="" />
+                          <span>NOTION</span>
+                        </li>
+                        <li>
+                          <img src={slack} alt="" />
+                          <span>SLACK</span>
+                        </li>
+                        <li>
+                          <img src={github} alt="" />
+                          <span>GITHUB</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    {project === "METHEDU" ? (
+                      <>
+                        <li>
+                          <img src={notion} alt="" />
+                          <span>NOTION</span>
+                        </li>
+                        <li>
+                          <img src={slack} alt="" />
+                          <span>SLACK</span>
+                        </li>
+                        <li>
+                          <img src={github} alt="" />
+                          <span>GITHUB</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                    {project === "BINGGRAE" ? (
+                      <>
+                        <li>
+                          <img src={notion} alt="" />
+                          <span>NOTION</span>
+                        </li>
+                        <li>
+                          <img src={slack} alt="" />
+                          <span>SLACK</span>
+                        </li>
+                        <li>
+                          <img src={github} alt="" />
+                          <span>GITHUB</span>
+                        </li>
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </ul>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </WorkCss>

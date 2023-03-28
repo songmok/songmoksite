@@ -21,20 +21,25 @@ export const WorkCss = styled.section`
       transform: translate(-50%, -50%);
       width: 85%;
     }
+    iframe {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
   .c2 {
     width: 50%;
     height: calc(100vh - 100px);
     position: relative;
-    display: flex;
+    display: grid;
     > ul {
       position: absolute;
-      left: 50%;
-      top: 40%;
-      transform: translate(-50%, -50%);
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
       width: 85%;
       height: 65%;
-      padding: 50px;
       > li {
         padding-bottom: 30px;
         display: flex;
@@ -57,6 +62,7 @@ export const WorkCss = styled.section`
           & + .mfText {
             font-size: ${defaltFontSize};
             line-height: 3rem;
+            width: 52%;
             .ps {
               height: 0;
               display: block;

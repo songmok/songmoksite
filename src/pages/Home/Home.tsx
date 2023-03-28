@@ -1,8 +1,4 @@
-import React, { useRef, useState } from "react";
-// fonntawesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
@@ -12,35 +8,30 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
-import { Pagination, Navigation, Keyboard } from "swiper";
+import { Pagination, Keyboard } from "swiper";
 import { Button } from "../../utils/repeat";
 import { HomeCss } from "./style/HomeCss";
 import Header from "../../components/common/Header/Header";
 import { SwiperCss } from "./style/SwiperCss";
 import { ReplitCss } from "./style/ReplitCss";
 import fullpage1 from "../../assets/images/project/fullpage1.png";
-type Props = {};
+import fullpage2 from "../../assets/images/project/fullpage2.png";
+import fullpage4 from "../../assets/images/project/fullpage4.png";
+import Footer from "../../components/common/Footer/Footer";
 
-const Home = (props: Props) => {
+const Home = () => {
   const [swiperRef, setSwiperRef] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
-
   const slideTo = (i: number) => {
-    swiperRef.slideTo(i - 1, 300);
+    swiperRef.slideTo(i, 300);
   };
-
-  const navigateNext = () => {
-    swiperRef.slideNext();
+  const handleBtnClick = (i: number) => {
+    slideTo(i); // 스와이퍼 슬라이드 이동
+    setActiveIndex(i); // 활성화 상태 변경
   };
-
-  const navigatePrev = () => {
-    swiperRef.slidePrev();
-  };
-
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.realIndex);
   };
-
   return (
     <>
       <HomeCss>
@@ -49,20 +40,10 @@ const Home = (props: Props) => {
           <div className="work">
             <span>작 업 물</span>
           </div>
-          <button
-            className="swiper-button-prev arrowBtn"
-            onClick={navigatePrev}
-          >
-            <FontAwesomeIcon icon={faCaretLeft} />
-          </button>
           <Swiper
             keyboard={true}
             slidesPerView={1}
             modules={[Pagination, Keyboard]}
-            navigation={{
-              prevEl: ".swiper-button-prev",
-              nextEl: ".swiper-button-next",
-            }}
             onSwiper={setSwiperRef}
             onSlideChange={handleSlideChange}
             className="mySwiper"
@@ -74,22 +55,22 @@ const Home = (props: Props) => {
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to="/ggobook">꼬북</Link>
+              <Link to="/ggobook">
+                <img src={fullpage2} alt="" />
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
               <Link to="/methedu">metaedu</Link>
             </SwiperSlide>
-            <SwiperSlide>추가</SwiperSlide>
+            <SwiperSlide>
+              <Link to="/binggrae">
+                <img src={fullpage4} alt="" />
+              </Link>
+            </SwiperSlide>
             <SwiperSlide>추가</SwiperSlide>
             <SwiperSlide>추가</SwiperSlide>
             <SwiperSlide>추가</SwiperSlide>
           </Swiper>
-          <button
-            className="swiper-button-next arrowBtn"
-            onClick={navigateNext}
-          >
-            <FontAwesomeIcon icon={faCaretRight} />
-          </button>
           <p className="swiperButton">
             {GnbData.map((v, i) => {
               return (
@@ -97,7 +78,7 @@ const Home = (props: Props) => {
                   <button
                     className={`${activeIndex === i ? "active" : ""}`}
                     onClick={() => {
-                      slideTo(v.id);
+                      handleBtnClick(i);
                     }}
                   >
                     {v.name}
@@ -108,8 +89,17 @@ const Home = (props: Props) => {
           </p>
         </SwiperCss>
         <ReplitCss>
-          <Link to="/study">자세히보기</Link>
+          <Link
+            to="https://www.notion.so/0f81e7ec1af1422294b3297c0308c825"
+            target="_blank"
+          >
+            <span>노션입니다!</span>
+          </Link>
+          <Link to="/study">
+            <span>STUDY PAGE로 이동하기!</span>
+          </Link>
         </ReplitCss>
+        <Footer />
       </HomeCss>
     </>
   );

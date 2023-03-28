@@ -7,13 +7,11 @@ export const SwiperCss = styled.div`
   padding-top: 100px;
   height: 80vh;
   display: grid;
-
+  align-items: center;
   .work {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding-top: 30px;
     span {
       position: relative;
       font-size: 3.3rem;
@@ -33,14 +31,17 @@ export const SwiperCss = styled.div`
     }
   }
   .swiper {
-    width: 37%;
-    height: 500px;
+    width: 45%;
+    height: 600px;
     overflow: hidden;
+    align-self: flex-start;
+    border: 2px solid #333;
+    border-radius: 30px;
     .swiper-slide {
       width: 100%;
       height: 100%;
       text-align: center;
-      font-size: 18px;
+      font-size: 1.8rem;
       background: #fff;
       display: flex;
       justify-content: center;
@@ -63,7 +64,7 @@ export const SwiperCss = styled.div`
     width: 40%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-self: flex-start;
     white-space: nowrap;
     > div {
       button {
@@ -76,28 +77,5 @@ export const SwiperCss = styled.div`
         }
       }
     }
-  }
-  .arrowBtn {
-    position: absolute;
-    top: 57%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: black;
-    font-size: 6rem;
-    transition: font-size 0.2s ease-out;
-    &:hover {
-      color: white;
-      font-size: 7rem;
-    }
-    &::after {
-      content: "";
-    }
-  }
-  .swiper-button-next {
-    right: 30%;
-  }
-  .swiper-button-prev {
-    left: 30%;
   }
 `;

@@ -8,9 +8,12 @@ const ThirdWork = () => {
         headerLink="methedu"
         video={""}
         project="METHEDU"
+        myWorks=""
         mainFuntion=""
         startDate=""
         endDate=""
+        embed={false}
+        study={false}
       />
     </>
   );

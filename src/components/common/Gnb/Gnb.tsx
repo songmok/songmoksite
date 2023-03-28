@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-// fonntawesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
-import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { GnbCss } from "./GnbCss";
@@ -17,6 +13,9 @@ import { Pagination, Keyboard } from "swiper";
 import { Button } from "../../../utils/repeat";
 import { GnbData } from "../../../assets/data/GnbData";
 import fullpage1 from "../../../assets/images/project/fullpage1.png";
+import fullpage2 from "../../../assets/images/project/fullpage2.png";
+import fullpage4 from "../../../assets/images/project/fullpage4.png";
+
 export interface toggle {
   showGnb: boolean;
 }
@@ -25,15 +24,11 @@ const Gnb = ({ showGnb }: toggle) => {
   const [swiperRef, setSwiperRef] = useState<any>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const slideTo = (i: number) => {
-    swiperRef.slideTo(i - 1, 300);
+    swiperRef.slideTo(i, 300);
   };
-
-  const navigateNext = () => {
-    swiperRef.slideNext();
-  };
-
-  const navigatePrev = () => {
-    swiperRef.slidePrev();
+  const handleBtnClick = (i: number) => {
+    slideTo(i); // 스와이퍼 슬라이드 이동
+    setActiveIndex(i); // 활성화 상태 변경
   };
   const handleSlideChange = (swiper: any) => {
     setActiveIndex(swiper.realIndex);
@@ -45,25 +40,10 @@ const Gnb = ({ showGnb }: toggle) => {
           <div className="work">
             <span>작 업 물</span>
           </div>
-          <button
-            className="swiper-button-prev arrowBtn"
-            onClick={navigatePrev}
-          >
-            <FontAwesomeIcon icon={faCaretLeft} />
-          </button>
           <Swiper
-            pagination={{
-              type: "fraction",
-            }}
             keyboard={true}
             slidesPerView={1}
-            spaceBetween={30}
             modules={[Pagination, Keyboard]}
-            centeredSlides={true}
-            navigation={{
-              prevEl: ".swiper-button-prev",
-              nextEl: ".swiper-button-next",
-            }}
             onSwiper={setSwiperRef}
             onSlideChange={handleSlideChange}
             loop={true}
@@ -75,22 +55,30 @@ const Gnb = ({ showGnb }: toggle) => {
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to="/ggobook">꼬북</Link>
+              <Link to="/ggobook">
+                <img src={fullpage2} alt="" />
+              </Link>
             </SwiperSlide>
             <SwiperSlide>
               <Link to="/methedu">metaedu</Link>
             </SwiperSlide>
-            <SwiperSlide>추가</SwiperSlide>
-            <SwiperSlide>추가</SwiperSlide>
-            <SwiperSlide>추가</SwiperSlide>
-            <SwiperSlide>추가</SwiperSlide>
+            <SwiperSlide>
+              <Link to="/binggrae">
+                <img src={fullpage4} alt="" />
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link to="/hansalim">
+                <img src={""} alt="" />
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link to="#">추가예정</Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link to="#">추가예정</Link>
+            </SwiperSlide>
           </Swiper>
-          <button
-            className="swiper-button-next arrowBtn"
-            onClick={navigateNext}
-          >
-            <FontAwesomeIcon icon={faCaretRight} />
-          </button>
           <p className="swiperButton">
             {GnbData.map((v, i) => {
               return (
@@ -98,7 +86,7 @@ const Gnb = ({ showGnb }: toggle) => {
                   <button
                     className={`${activeIndex === i ? "active" : ""}`}
                     onClick={() => {
-                      slideTo(v.id);
+                      handleBtnClick(i);
                     }}
                   >
                     {v.name}

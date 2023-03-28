@@ -45,6 +45,8 @@ export const GnbCss = styled.div`
       width: 24%;
       height: 300px;
       overflow: hidden;
+      border-radius: 10px;
+      border: 2px solid #444;
       .swiper-slide {
         width: 100%;
         height: 100%;
@@ -77,7 +79,7 @@ export const GnbCss = styled.div`
       white-space: nowrap;
       > div {
         button {
-          width: 100px;
+          padding: 1rem;
           ${minFontSize}
           display: block;
           &.active {
@@ -86,23 +88,6 @@ export const GnbCss = styled.div`
             color: #fff;
           }
         }
-      }
-    }
-    .arrowBtn {
-      position: absolute;
-      top: 50%;
-      background-color: transparent;
-      border: none;
-      outline: none;
-      color: black;
-      font-size: 6rem;
-      transition: font-size 0.2s ease-out;
-      &:hover {
-        color: white;
-        font-size: 7rem;
-      }
-      &::after {
-        content: "";
       }
     }
     .swiper-button-next {

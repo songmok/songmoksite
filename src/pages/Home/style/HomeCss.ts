@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 export const HomeCss = styled.div`
   height: 100vh;
+  overflow: hidden;
   .box2 {
     position: fixed;
     left: 0;

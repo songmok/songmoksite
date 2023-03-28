@@ -4,7 +4,7 @@ export const Button = styled.div`
   z-index: 99;
   position: relative;
   button {
-    padding: 2rem 2rem;
+    padding: 2rem;
     border: 0.1rem #fff solid;
     border-radius: 5px;
     color: #fff;

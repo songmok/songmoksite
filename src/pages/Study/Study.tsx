@@ -16,11 +16,19 @@ const Study = (props: Props) => {
               return (
                 <>
                   <li key={i}>
-                    <div className="imbed">
-                      <div className="box"></div>
+                    <div className="embed">
+                      <iframe
+                        title={v.title}
+                        src={`https://replit.com/@songmok/${v.title}?embed=1`}
+                        width="600"
+                        height="400"
+                      />
                     </div>
                     <div className="link">
-                      <span>NAV</span>
+                      <span>
+                        {v.subtitle}
+                        <Link to={v.link}>자세히 보기</Link>
+                      </span>
                     </div>
                   </li>
                 </>
