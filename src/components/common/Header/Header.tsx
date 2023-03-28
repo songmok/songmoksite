@@ -9,11 +9,17 @@ import { HeaderCss } from "./HeaderCss";
 export interface HeaderTopProps {
   headerText: string;
   headerLink: string;
-  showGnb?: boolean;
   ngnb?: number;
 }
-
-const Header = ({ showGnb, headerText, headerLink, ngnb }: HeaderTopProps) => {
+export interface Toggle {
+  showGnb?: boolean;
+}
+const Header = ({
+  showGnb,
+  headerText,
+  headerLink,
+  ngnb,
+}: HeaderTopProps & Toggle) => {
   const [showGnbState, setShowGnbState] = useState<boolean>(false);
 
   const toggleGnb = () => {

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <>
       <FooterCss>
-        <span>푸터입니다</span>
+        <span>about me</span>
       </FooterCss>
     </>
   );
