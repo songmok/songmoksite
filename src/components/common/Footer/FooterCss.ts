@@ -5,7 +5,8 @@ export const FooterCss = styled.footer`
   justify-content: center;
   height: 118px;
   background-color: #25055a;
-  span {
+  a {
+    font-size: 3rem;
     color: #adc4f7;
   }
 `;

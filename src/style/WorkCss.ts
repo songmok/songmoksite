@@ -1,14 +1,9 @@
 import styled from "@emotion/styled";
-import {
-  defaltFontSize,
-  middleFontSize,
-  minFontSize,
-  nanoFontSize,
-  standFontSize,
-} from "../utils/font";
+import { defaltFontSize, middleFontSize, standFontSize } from "../utils/font";
 export const WorkCss = styled.section`
   position: relative;
   display: flex;
+  background-color: #f4eed3;
   .c1 {
     width: 50%;
     height: calc(100vh - 100px);

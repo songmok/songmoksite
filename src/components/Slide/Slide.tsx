@@ -13,6 +13,7 @@ import { Button } from "../../utils/repeat";
 import fullpage1 from "../../assets/images/project/fullpage1.png";
 import fullpage2 from "../../assets/images/project/fullpage2.png";
 import fullpage4 from "../../assets/images/project/fullpage4.png";
+import fullpage5 from "../../assets/images/project/fullpage5.png";
 export interface toggle {
   showGnb?: boolean;
 }
@@ -63,7 +64,7 @@ const Slide = ({ showGnb }: toggle) => {
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/hansalim">
-            <img src={""} alt="" />
+            <img src={fullpage5} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide>추가예정</SwiperSlide>

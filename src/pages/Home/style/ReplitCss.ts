@@ -23,7 +23,11 @@ export const ReplitCss = styled.div`
       }
     }
     span {
-      font-size: 30px;
+      font-size: 3rem;
+      img {
+        width: 50px;
+        padding-right: 20px;
+      }
     }
   }
 `;

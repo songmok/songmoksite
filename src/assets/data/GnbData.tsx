@@ -20,12 +20,12 @@ export const GnbData = [
   },
   {
     id: 3,
-    name: "binggrae",
+    name: "BINGGRAE",
     link: "binggrae",
   },
   {
     id: 4,
-    name: "hansalim",
+    name: "HANSALIM",
     link: "hansalim",
   },
   {

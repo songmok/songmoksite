@@ -49,7 +49,7 @@ const WorkLayOut = (props: WorkProps) => {
       <WorkCss>
         <div className="c1">
           {video && (
-            <video src={video} className="video" autoPlay muted></video>
+            <video src={video} className="video" controls muted></video>
           )}
           {embed && (
             <iframe
@@ -64,7 +64,7 @@ const WorkLayOut = (props: WorkProps) => {
           <ul>
             <li>
               <span className="projectHeader">프로젝트 제목 -</span>
-              <span>{project}</span>
+              <span style={{ paddingRight: "20px" }}>{project}</span>
               <Link to={`${link}`} target="_blank" className="gitLink">
                 <img src={github} alt="" />
               </Link>
@@ -232,10 +232,6 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "SUTABUCKS" ? (
                       <>
                         <li>
-                          <img src={notion} alt="" />
-                          <span>NOTION</span>
-                        </li>
-                        <li>
                           <img src={slack} alt="" />
                           <span>SLACK</span>
                         </li>
@@ -249,10 +245,6 @@ const WorkLayOut = (props: WorkProps) => {
                     )}
                     {project === "GGOBOOK" ? (
                       <>
-                        <li>
-                          <img src={notion} alt="" />
-                          <span>NOTION</span>
-                        </li>
                         <li>
                           <img src={slack} alt="" />
                           <span>SLACK</span>
@@ -285,10 +277,6 @@ const WorkLayOut = (props: WorkProps) => {
                     )}
                     {project === "BINGGRAE" ? (
                       <>
-                        <li>
-                          <img src={notion} alt="" />
-                          <span>NOTION</span>
-                        </li>
                         <li>
                           <img src={slack} alt="" />
                           <span>SLACK</span>

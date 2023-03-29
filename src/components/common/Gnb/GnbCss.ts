@@ -71,7 +71,7 @@ export const GnbCss = styled.div`
     .swiperButton {
       position: relative;
       margin: 0px auto;
-      width: 40%;
+      width: 30%;
       height: 80px;
       display: flex;
       justify-content: space-between;
