@@ -1,14 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FooterCss } from "./FooterCss";
+ import { FooterCss } from "./FooterCss";
 
 const Footer = () => {
+  function openNewTab(url: string) {
+    window.open(url, "_blank");
+  }
   return (
     <>
       <FooterCss>
-        <Link to="about" target="_blank">
-          이력서입니다.
-        </Link>
+        <div onClick={() => openNewTab("/about")}>이력서 입니다</div>
       </FooterCss>
     </>
   );
