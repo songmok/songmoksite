@@ -14,6 +14,7 @@ import fullpage1 from "../../assets/images/project/fullpage1.png";
 import fullpage2 from "../../assets/images/project/fullpage2.png";
 import fullpage4 from "../../assets/images/project/fullpage4.png";
 import fullpage5 from "../../assets/images/project/fullpage5.png";
+import { SlideCss } from "./SlideCss";
 export interface toggle {
   showGnb?: boolean;
 }
@@ -35,41 +36,60 @@ const Slide = ({ showGnb }: toggle) => {
       <div className="work">
         <span>작 업 물</span>
       </div>
-      <Swiper
-        keyboard={true}
-        slidesPerView={1}
-        modules={[Pagination, Keyboard]}
-        onSwiper={setSwiperRef}
-        onSlideChange={handleSlideChange}
-        className="mySwiper"
-        loop={true}
-      >
-        <SwiperSlide>
-          <Link to="/sutabucks">
-            <img src={fullpage1} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/ggobook">
-            <img src={fullpage2} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/methedu">metaedu</Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/binggrae">
-            <img src={fullpage4} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/hansalim">
-            <img src={fullpage5} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>추가예정</SwiperSlide>
-        <SwiperSlide>추가예정</SwiperSlide>
-      </Swiper>
+      <SlideCss>
+        <Swiper
+          keyboard={true}
+          slidesPerView={1}
+          modules={[Pagination, Keyboard]}
+          onSwiper={setSwiperRef}
+          onSlideChange={handleSlideChange}
+          className="mySwiper"
+          loop={true}
+        >
+          <SwiperSlide>
+            <Link to="/sutabucks">
+              <img src={fullpage1} alt="" />
+              <div className="overlay">
+                <h2>sutabucks</h2>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link to="/ggobook">
+              <img src={fullpage2} alt="" />
+              <div className="overlay">
+                <h2>sutabucks</h2>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link to="/methedu">
+              <img src={""} alt="" />
+              <div className="overlay">
+                <h2>sutabucks</h2>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link to="/binggrae">
+              <img src={fullpage4} alt="" />
+              <div className="overlay">
+                <h2>sutabucks</h2>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Link to="/hansalim">
+              <img src={fullpage5} alt="" />
+              <div className="overlay">
+                <h2>sutabucks</h2>
+              </div>
+            </Link>
+          </SwiperSlide>
+          <SwiperSlide>추가예정</SwiperSlide>
+          <SwiperSlide>추가예정</SwiperSlide>
+        </Swiper>
+      </SlideCss>
       <p className="swiperButton">
         {GnbData.map((v, i) => {
           return (

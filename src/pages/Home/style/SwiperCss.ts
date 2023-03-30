@@ -6,8 +6,9 @@ export const SwiperCss = styled.div`
   background-color: #92e0eb;
   padding-top: 100px;
   height: 80vh;
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   .work {
     width: 100%;
     display: flex;
@@ -30,30 +31,32 @@ export const SwiperCss = styled.div`
       }
     }
   }
-  .swiper {
-    width: 45%;
-    height: 600px;
-    overflow: hidden;
-    align-self: flex-start;
-    border: 2px solid #333;
-    border-radius: 30px;
-    .swiper-slide {
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      font-size: 1.8rem;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      > a {
-        display: block;
+  > div {
+    .swiper {
+      width: 45%;
+      height: 600px;
+      overflow: hidden;
+      align-self: flex-start;
+      border: 2px solid #333;
+      border-radius: 30px;
+      .swiper-slide {
         width: 100%;
         height: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+        background: #fff;
         display: flex;
-        > img {
-          width: 100%;
+        justify-content: center;
+        align-items: center;
+        > a {
           display: block;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          > img {
+            width: 100%;
+            display: block;
+          }
         }
       }
     }
