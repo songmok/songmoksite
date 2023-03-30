@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/songmoksite/static/css/main.daee639b.css",
+    "main.js": "/songmoksite/static/js/main.1428331d.js",
+    "static/media/sutabucks.mp4": "/songmoksite/static/media/sutabucks.75d490d0307b0e0e0f4b.mp4",
+    "static/media/ggobook.mp4": "/songmoksite/static/media/ggobook.f20a198f8220e76d00fb.mp4",
+    "static/media/fullpage5.png": "/songmoksite/static/media/fullpage5.3542897f2658acf988dc.png",
+    "static/media/NanumSquareNeo-Variable.woff2": "/songmoksite/static/media/NanumSquareNeo-Variable.1ec64c4f932f64914ebd.woff2",
+    "static/media/fullpage1.png": "/songmoksite/static/media/fullpage1.dda8e2f598072930e77e.png",
+    "static/media/fullpage2.png": "/songmoksite/static/media/fullpage2.771b70dc8fc99ad00286.png",
+    "static/media/fullpage4.png": "/songmoksite/static/media/fullpage4.10257905de8523fcd5d6.png",
+    "static/media/react.png": "/songmoksite/static/media/react.2f2532db663fd5ec5f95.png",
+    "static/media/htmljscss.png": "/songmoksite/static/media/htmljscss.945420d06982c3bdfe99.png",
+    "static/media/notion.png": "/songmoksite/static/media/notion.c365f286235b0c29c3be.png",
+    "static/media/gitHub.png": "/songmoksite/static/media/gitHub.f6aa11daa633154fc8b6.png",
+    "static/media/slack.png": "/songmoksite/static/media/slack.65043164e383fef00e9b.png",
+    "static/media/scss.png": "/songmoksite/static/media/scss.051888ab516950ed48cb.png",
+    "static/media/styled-component.png": "/songmoksite/static/media/styled-component.76b9df72acc5afb0c385.png",
+    "index.html": "/songmoksite/index.html",
+    "main.daee639b.css.map": "/songmoksite/static/css/main.daee639b.css.map",
+    "main.1428331d.js.map": "/songmoksite/static/js/main.1428331d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.daee639b.css",
+    "static/js/main.1428331d.js"
+  ]
+}
