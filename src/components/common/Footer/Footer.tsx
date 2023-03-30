@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <FooterCss>
         <Link to="about" target="_blank">
-          이력서입니다
+          이력서입니다.
         </Link>
       </FooterCss>
     </>

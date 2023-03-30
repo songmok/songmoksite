@@ -4,9 +4,10 @@ import FirstWork from "./pages/Works/FirstWork/FirstWork";
 import SecondWork from "./pages/Works/SecondWork/SecondWork";
 import ThirdWork from "./pages/Works/ThirdWork/ThirdWork";
 import Study from "./pages/Study/Study";
-import About from "./components/About/About";
+
 import FourthWork from "./pages/Works/FourthWork/FourthWork";
 import FifthWork from "./pages/Works/FifthWork/FifthWork";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
           <Route path="/methedu" element={<ThirdWork />} />
           <Route path="/binggrae" element={<FourthWork />} />
           <Route path="/hansalim" element={<FifthWork />} />
-          <Route path="/study" element={<Study />} />
           <Route path="/about" element={<About />} />
+          <Route path="/study" element={<Study />} />
         </Routes>
       </Router>
     </>

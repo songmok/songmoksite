@@ -1,9 +1,15 @@
-import React from "react";
+import { AboutCss } from "./AboutCss";
 
-type Props = {};
-
-const About = (props: Props) => {
-  return <div>About</div>;
+const About = () => {
+  return (
+    <AboutCss>
+      <embed
+        src={`${process.env.PUBLIC_URL}/pdf/info.pdf`}
+        width="100%"
+        height="960px"
+      />
+    </AboutCss>
+  );
 };
 
 export default About;
