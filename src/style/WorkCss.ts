@@ -14,9 +14,9 @@ export const WorkCss = styled.section`
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 85%;
+      width: 90%;
     }
-    iframe {
+    > iframe {
       position: absolute;
       left: 50%;
       top: 50%;
