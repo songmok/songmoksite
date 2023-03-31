@@ -1,4 +1,4 @@
- import { FooterCss } from "./FooterCss";
+import { FooterCss } from "./FooterCss";
 
 const Footer = () => {
   function openNewTab(url: string) {
@@ -7,7 +7,9 @@ const Footer = () => {
   return (
     <>
       <FooterCss>
-        <div onClick={() => openNewTab("/about")}>이력서 입니다</div>
+        <div onClick={() => openNewTab("/about")}>
+          <h2>이력서 입니다!</h2>
+        </div>
       </FooterCss>
     </>
   );

@@ -50,7 +50,12 @@ const Slide = ({ showGnb }: toggle) => {
             <Link to="/sutabucks">
               <img src={fullpage1} alt="" />
               <div className="overlay">
-                <h2>sutabucks</h2>
+                <div>
+                  <p>
+                    <h2>SUTABUCKS</h2>
+                    <span>배달 웹 프로그램</span>
+                  </p>
+                </div>
               </div>
             </Link>
           </SwiperSlide>
@@ -58,7 +63,12 @@ const Slide = ({ showGnb }: toggle) => {
             <Link to="/ggobook">
               <img src={fullpage2} alt="" />
               <div className="overlay">
-                <h2>sutabucks</h2>
+                <div>
+                  <p>
+                    <h2>GGOBOOK</h2>
+                    <span>독서 일정 관리 웹</span>
+                  </p>
+                </div>
               </div>
             </Link>
           </SwiperSlide>
@@ -66,7 +76,7 @@ const Slide = ({ showGnb }: toggle) => {
             <Link to="/methedu">
               <img src={""} alt="" />
               <div className="overlay">
-                <h2>sutabucks</h2>
+                <div>작업 진행 중입니다!</div>
               </div>
             </Link>
           </SwiperSlide>
@@ -74,7 +84,12 @@ const Slide = ({ showGnb }: toggle) => {
             <Link to="/binggrae">
               <img src={fullpage4} alt="" />
               <div className="overlay">
-                <h2>sutabucks</h2>
+                <div>
+                  <p>
+                    <h2>BINGGRAE</h2>
+                    <span>빙그레 클론코딩</span>
+                  </p>
+                </div>
               </div>
             </Link>
           </SwiperSlide>
@@ -82,12 +97,25 @@ const Slide = ({ showGnb }: toggle) => {
             <Link to="/hansalim">
               <img src={fullpage5} alt="" />
               <div className="overlay">
-                <h2>sutabucks</h2>
+                <div>
+                  <p>
+                    <h2>HANSALIM</h2>
+                    <span>한살림 클론코딩</span>
+                  </p>
+                </div>
               </div>
             </Link>
           </SwiperSlide>
-          <SwiperSlide>추가예정</SwiperSlide>
-          <SwiperSlide>추가예정</SwiperSlide>
+          <SwiperSlide>
+            <div className="overlay">
+              <div>추가 예정 입니다!</div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="overlay">
+              <div>추가 예정 입니다!</div>
+            </div>
+          </SwiperSlide>
         </Swiper>
       </SlideCss>
       <p className="swiperButton">

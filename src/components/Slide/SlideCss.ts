@@ -7,7 +7,7 @@ export const SlideCss = styled.div`
     opacity: 1;
   }
 
-  .swiper-slide:hover h2 {
+  .swiper-slide:hover div {
     opacity: 1;
   }
 
@@ -20,15 +20,25 @@ export const SlideCss = styled.div`
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.5s ease;
-  }
-  h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    > div {
+      color: white;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      > p {
+        display: block;
+        > h2 {
+          display: block;
+          padding-bottom: 50px;
+        }
+        > span {
+          display: block;
+        }
+      }
+    }
   }
 `;
