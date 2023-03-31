@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/songmoksite/static/css/main.daee639b.css",
-    "main.js": "/songmoksite/static/js/main.c2557ff9.js",
+    "main.js": "/songmoksite/static/js/main.4f59e0c6.js",
     "static/media/sutabucks.mp4": "/songmoksite/static/media/sutabucks.75d490d0307b0e0e0f4b.mp4",
     "static/media/ggobook.mp4": "/songmoksite/static/media/ggobook.f20a198f8220e76d00fb.mp4",
     "static/media/fullpage5.png": "/songmoksite/static/media/fullpage5.3542897f2658acf988dc.png",
@@ -18,10 +18,10 @@
     "static/media/styled-component.png": "/songmoksite/static/media/styled-component.76b9df72acc5afb0c385.png",
     "index.html": "/songmoksite/index.html",
     "main.daee639b.css.map": "/songmoksite/static/css/main.daee639b.css.map",
-    "main.c2557ff9.js.map": "/songmoksite/static/js/main.c2557ff9.js.map"
+    "main.4f59e0c6.js.map": "/songmoksite/static/js/main.4f59e0c6.js.map"
   },
   "entrypoints": [
     "static/css/main.daee639b.css",
-    "static/js/main.c2557ff9.js"
+    "static/js/main.4f59e0c6.js"
   ]
 }
