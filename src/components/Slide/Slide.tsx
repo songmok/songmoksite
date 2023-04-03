@@ -51,10 +51,10 @@ const Slide = ({ showGnb }: toggle) => {
               <img src={fullpage1} alt="" />
               <div className="overlay">
                 <div>
-                  <p>
+                  <div>
                     <h2>SUTABUCKS</h2>
                     <span>배달 웹 프로그램</span>
-                  </p>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -64,10 +64,10 @@ const Slide = ({ showGnb }: toggle) => {
               <img src={fullpage2} alt="" />
               <div className="overlay">
                 <div>
-                  <p>
+                  <div>
                     <h2>GGOBOOK</h2>
                     <span>독서 일정 관리 웹</span>
-                  </p>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -85,10 +85,10 @@ const Slide = ({ showGnb }: toggle) => {
               <img src={fullpage4} alt="" />
               <div className="overlay">
                 <div>
-                  <p>
+                  <div>
                     <h2>BINGGRAE</h2>
                     <span>빙그레 클론코딩</span>
-                  </p>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -98,10 +98,10 @@ const Slide = ({ showGnb }: toggle) => {
               <img src={fullpage5} alt="" />
               <div className="overlay">
                 <div>
-                  <p>
+                  <div>
                     <h2>HANSALIM</h2>
                     <span>한살림 클론코딩</span>
-                  </p>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -118,7 +118,7 @@ const Slide = ({ showGnb }: toggle) => {
           </SwiperSlide>
         </Swiper>
       </SlideCss>
-      <p className="swiperButton">
+      <div className="swiperButton">
         {GnbData.map((v, i) => {
           return (
             <Button key={i}>
@@ -133,7 +133,7 @@ const Slide = ({ showGnb }: toggle) => {
             </Button>
           );
         })}
-      </p>
+      </div>
     </>
   );
 };

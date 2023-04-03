@@ -29,11 +29,11 @@ export const SlideCss = styled.div`
       justify-content: center;
       height: 100%;
       width: 100%;
-      > p {
+      > div {
         display: block;
         > h2 {
           display: block;
-          padding-bottom: 50px;
+          padding-bottom: 70px;
         }
         > span {
           display: block;

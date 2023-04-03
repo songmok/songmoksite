@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 
-export const Button = styled.div`
+export const Button = styled.span`
+  display: block;
   z-index: 99;
-  position: relative;
+
   button {
     padding: 2rem;
     border: 0.1rem #fff solid;

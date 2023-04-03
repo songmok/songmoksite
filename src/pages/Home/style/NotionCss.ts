@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+
 export const NotionCss = styled.div`
   text-align: center;
   display: flex;
@@ -20,6 +21,7 @@ export const NotionCss = styled.div`
       height: 100%;
       img {
         width: 30px;
+
         display: block;
         align-self: center;
         margin-right: 10px;
