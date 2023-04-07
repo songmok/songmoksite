@@ -1,6 +1,6 @@
 import Header from "../../components/common/Header/Header";
 import react from "../../assets/images/stacks/react.png";
-import hjc from "../../assets/images/stacks/htmljscss.png";
+import hjc from "htmlcssjs../../assets/images/stacks/htmljscss.png";
 import figma from "../../assets/images/stacks/figma.png";
 import redux from "../../assets/images/stacks/redux.png";
 import cssinjs from "../../assets/images/stacks/styled-component.png";
@@ -66,7 +66,7 @@ const WorkLayOut = (props: WorkProps) => {
               <span className="projectHeader">프로젝트 제목 -</span>
               <span style={{ paddingRight: "20px" }}>{project}</span>
               <Link to={`${link}`} target="_blank" className="gitLink">
-                <img src={github} alt="" />
+                <img src={github} alt="github" />
               </Link>
             </li>
             {study === true ? (
@@ -88,11 +88,11 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "HANSALIM" ? (
                       <>
                         <li>
-                          <img src={hjc} alt="" />
+                          <img src={hjc} alt="htmlcssjs" />
                           <span>HTML/CSS/JS</span>
                         </li>
                         <li>
-                          <img src={scss} alt="" />
+                          <img src={scss} alt="scss" />
                           <span>SCSS</span>
                         </li>
                       </>
@@ -133,19 +133,19 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "SUTABUCKS" ? (
                       <>
                         <li>
-                          <img src={hjc} alt="" />
+                          <img src={hjc} alt="htmlcssjs" />
                           <span>HTML/CSS/JS</span>
                         </li>
                         <li>
-                          <img src={cssinjs} alt="" />
+                          <img src={cssinjs} alt="cssinjs" />
                           <span>STYLED-COMPONENTS</span>
                         </li>
                         <li>
-                          <img src={react} alt="" />
+                          <img src={react} alt="react" />
                           <span>REACT</span>
                         </li>
                         <li>
-                          <img src={redux} alt="" />
+                          <img src={redux} alt="redux" />
                           <span>REDUX</span>
                         </li>
                       </>
@@ -155,19 +155,19 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "GGOBOOK" ? (
                       <>
                         <li>
-                          <img src={hjc} alt="" />
+                          <img src={hjc} alt="htmlcssjs" />
                           <span>HTML/CSS/JS</span>
                         </li>
                         <li>
-                          <img src={cssinjs} alt="" />
+                          <img src={cssinjs} alt="cssinjs" />
                           <span>STYLED-COMPONENTS</span>
                         </li>
                         <li>
-                          <img src={react} alt="" />
+                          <img src={react} alt="react" />
                           <span>REACT</span>
                         </li>
                         <li>
-                          <img src={redux} alt="" />
+                          <img src={redux} alt="redux" />
                           <span>REDUX</span>
                         </li>
                       </>
@@ -177,19 +177,19 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "METHEDU" ? (
                       <>
                         <li>
-                          <img src={hjc} alt="" />
+                          <img src={hjc} alt="htmlcssjs" />
                           <span>HTML/CSS/JS</span>
                         </li>
                         <li>
-                          <img src={cssinjs} alt="" />
+                          <img src={cssinjs} alt="cssinjs" />
                           <span>STYLED-COMPONENTS</span>
                         </li>
                         <li>
-                          <img src={react} alt="" />
+                          <img src={react} alt="react" />
                           <span>REACT</span>
                         </li>
                         <li>
-                          <img src={redux} alt="" />
+                          <img src={redux} alt="redux" />
                           <span>REDUX</span>
                         </li>
                       </>
@@ -199,11 +199,11 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "BINGGRAE" ? (
                       <>
                         <li>
-                          <img src={hjc} alt="" />
+                          <img src={hjc} alt="htmlcssjs" />
                           <span>HTML/CSS/JS</span>
                         </li>
                         <li>
-                          <img src={scss} alt="" />
+                          <img src={scss} alt="scss" />
                           <span>SCSS</span>
                         </li>
                       </>
@@ -213,11 +213,11 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "HANSALIM" ? (
                       <>
                         <li>
-                          <img src={hjc} alt="" />
+                          <img src={hjc} alt="htmlcssjs" />
                           <span>HTML/CSS/JS</span>
                         </li>
                         <li>
-                          <img src={scss} alt="" />
+                          <img src={scss} alt="scss" />
                           <span>SCSS</span>
                         </li>
                       </>
@@ -232,11 +232,11 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "SUTABUCKS" ? (
                       <>
                         <li>
-                          <img src={slack} alt="" />
+                          <img src={slack} alt="slack" />
                           <span>SLACK</span>
                         </li>
                         <li>
-                          <img src={github} alt="" />
+                          <img src={github} alt="github" />
                           <span>GITHUB</span>
                         </li>
                       </>
@@ -246,11 +246,11 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "GGOBOOK" ? (
                       <>
                         <li>
-                          <img src={slack} alt="" />
+                          <img src={slack} alt="slack" />
                           <span>SLACK</span>
                         </li>
                         <li>
-                          <img src={github} alt="" />
+                          <img src={github} alt="github" />
                           <span>GITHUB</span>
                         </li>
                       </>
@@ -260,15 +260,15 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "METHEDU" ? (
                       <>
                         <li>
-                          <img src={notion} alt="" />
+                          <img src={notion} alt="notion" />
                           <span>NOTION</span>
                         </li>
                         <li>
-                          <img src={slack} alt="" />
+                          <img src={slack} alt="slack" />
                           <span>SLACK</span>
                         </li>
                         <li>
-                          <img src={github} alt="" />
+                          <img src={github} alt="github" />
                           <span>GITHUB</span>
                         </li>
                       </>
@@ -278,11 +278,11 @@ const WorkLayOut = (props: WorkProps) => {
                     {project === "BINGGRAE" ? (
                       <>
                         <li>
-                          <img src={slack} alt="" />
+                          <img src={slack} alt="slack" />
                           <span>SLACK</span>
                         </li>
                         <li>
-                          <img src={github} alt="" />
+                          <img src={github} alt="github" />
                           <span>GITHUB</span>
                         </li>
                       </>

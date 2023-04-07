@@ -48,7 +48,7 @@ const Slide = ({ showGnb }: toggle) => {
         >
           <SwiperSlide>
             <Link to="/sutabucks">
-              <img src={fullpage1} alt="" />
+              <img src={fullpage1} alt="SUTABUCKS" />
               <div className="overlay">
                 <div>
                   <div>
@@ -61,7 +61,7 @@ const Slide = ({ showGnb }: toggle) => {
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/ggobook">
-              <img src={fullpage2} alt="" />
+              <img src={fullpage2} alt="GGOBOOK" />
               <div className="overlay">
                 <div>
                   <div>
@@ -74,7 +74,7 @@ const Slide = ({ showGnb }: toggle) => {
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/methedu">
-              <img src={""} alt="" />
+              <img src={""} alt="METHEDU" />
               <div className="overlay">
                 <div>작업 진행 중입니다!</div>
               </div>
@@ -82,7 +82,7 @@ const Slide = ({ showGnb }: toggle) => {
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/binggrae">
-              <img src={fullpage4} alt="" />
+              <img src={fullpage4} alt="BINGGRAE" />
               <div className="overlay">
                 <div>
                   <div>
@@ -95,7 +95,7 @@ const Slide = ({ showGnb }: toggle) => {
           </SwiperSlide>
           <SwiperSlide>
             <Link to="/hansalim">
-              <img src={fullpage5} alt="" />
+              <img src={fullpage5} alt="HANSALIM" />
               <div className="overlay">
                 <div>
                   <div>

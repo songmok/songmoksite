@@ -20,7 +20,7 @@ const Home = () => {
             target="_blank"
           >
             <span>
-              <img src={notion} alt="" />
+              <img src={notion} alt="notion" />
               <h2>노션입니다!</h2>
             </span>
           </Link>
