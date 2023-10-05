@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-const DarkModeButton = () => {
+const MobDarkModeButton = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -24,4 +24,4 @@ const DarkModeButton = () => {
   );
 };
 
-export default DarkModeButton;
+export default MobDarkModeButton;

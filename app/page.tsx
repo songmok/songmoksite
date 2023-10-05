@@ -1,67 +1,35 @@
 "use client";
+
 import Link from "next/link";
-import DarkModeButton from "./utils/DarkModeButton";
-import useMuiMedia from "./hook/useMuiMedia";
-import MobDarkModeButton from "./utils/MobDarkModeButton";
 
 export default function Home() {
-  const { mobile } = useMuiMedia();
-
   return (
-    <header className="text-gray-600 body-font relative">
-      {!mobile ? (
-        <>
-          <div className="container mx-auto  p-5  ">
-            <div className="flex justify-between mx-auto items-center mb-10">
-              <Link
-                className="flex title-font font-medium text-gray-900"
-                href="/"
-              >
-                <h1 className="ml-3 text-xl">SONGMOK</h1>
+    <>
+      <section className="text-gray-600 body-font">
+        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+              프론트엔드 개발자&nbsp;
+              <br className="hidden lg:inline-block" />
+              오한수 입니다.
+            </h1>
+            <p className="mb-8 leading-relaxed">
+              - 항상 기술과 디자인 트렌드를 주시하며 새로운 걸 배우고 있습니다.
+              <br />- 다수의 팀 프로젝트로 협업을 위한 자세가 준비되어 있습니다.
+              <br />- 사용자를 위해 항상 고민합니다.
+              <br />
+            </p>
+            <div className="flex justify-center">
+              <Link href="/portfolio">
+                <button className="btn-project-index">Portofolio</button>
               </Link>
-              <MobDarkModeButton />
             </div>
-            <nav className="flex flex-wrap items-center text-base text justify-around">
-              <Link className="hover:text-gray-900" href="/">
-                Home
-              </Link>
-              <Link className="hover:text-gray-900" href="/stacks">
-                Stacks
-              </Link>
-              <Link className=" hover:text-gray-900" href="/portfolio">
-                Portfolio
-              </Link>
-              <Link className=" hover:text-gray-900" href="/life">
-                Life
-              </Link>
-            </nav>
           </div>
-        </>
-      ) : (
-        <div className="container mx-auto flex flex-wrap p-5 flex-row items-center">
-          <Link
-            className="flex title-font font-medium items-center text-gray-900"
-            href="/"
-          >
-            <h1 className="ml-3 text-xl ">SONGMOK</h1>
-          </Link>
-          <nav className="ml-auto flex flex-wrap items-center text-base">
-            <Link className="mr-5 hover:text-gray-900" href="/">
-              Home
-            </Link>
-            <Link className="mr-5 hover:text-gray-900" href="/stacks">
-              Stacks
-            </Link>
-            <Link className=" mr-5 hover:text-gray-900" href="/portfolio">
-              Portfolio
-            </Link>
-            <Link className=" mr-5 hover:text-gray-900" href="/life">
-              Life
-            </Link>
-          </nav>
-          <DarkModeButton />
+          {/* <div className="flex justify-center lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <DevAni />
+    </div> */}
         </div>
-      )}
-    </header>
+      </section>
+    </>
   );
 }
