@@ -82,7 +82,7 @@ export default async function Portfolio() {
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 flex-col items-center">
+      <div className="container mx-auto flex px-5 py-12 flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl font-medium text-gray-900">
           Portfolio: {projects.results?.length + projects2.results.length}
         </h1>
