@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Modal from "react-modal";
 
 export interface ICloneModal {
@@ -22,8 +21,8 @@ const CloneModal: React.FC<ICloneModal> = ({
     <>
       {ModalOpen && (
         <Modal
-          isOpen={true} // Use a state variable to control the modal open/close state
-          onRequestClose={closeModal} // Function to close the modal
+          isOpen={true}
+          onRequestClose={closeModal}
           className="fixed rounded-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900 p-16 rounded-8 flex flex-col items-center justify-center overflow-hidden border border-white"
           overlayClassName="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center"
         >

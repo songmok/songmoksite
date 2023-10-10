@@ -6,15 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ICloneData } from "../../../portfolio/page";
 
-
 export default function CloneItem({ data }: { data: ICloneData }) {
   const gitUrl = data.properties.Git.url;
   const title = data.properties.Name.title[0].plain_text;
   const siteUrl = data.url;
   const imgUrl = data.cover?.file?.url;
   const RepUrl = data.properties.Replit.url;
-  const tags = data.properties.Tags.multi_select; // 배열[]
-  console.log(`tags:${data.properties.Tags.multi_select}`);
+  const tags = data.properties.Tags.multi_select;
   const RepEmb: string = RepUrl + "?embed=1";
 
   const [ModalOpen, setModalOpen] = useState(false);

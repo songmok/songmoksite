@@ -1,7 +1,7 @@
 "use clinet";
-import React, { useState } from "react";
 import { TOKEN, DATABASE_ID, DATABASE_ID2 } from "../../config";
 import CloneItem from "../components/_portfolio/_clone/CloneItem";
+import ProjectItem from "../components/_portfolio/_project/ProjectItem";
 export type ICloneData = {
   url?: string;
   properties: IProperties;
@@ -9,11 +9,33 @@ export type ICloneData = {
   GitUrl: string;
   ReplitUrl: string;
   cover: ICover;
+  id: number;
 };
-type ICover = { file: { url: string } };
+export type IProjectData = {
+  url?: string;
+  properties: IProperties;
+  GitUrl: string;
+  cover: ICover;
+  id: number;
+};
+type ICover = {
+  file: { url: string };
+  external: {
+    url: string;
+  };
+};
 type IProperties = {
+  Dated: {
+    date: {
+      start: string;
+      end: string;
+    };
+  };
   Name: {
     title: {
+      text: {
+        content: string;
+      };
       plain_text: string;
     }[];
   };
@@ -62,21 +84,21 @@ export default async function Portfolio() {
     <section className="text-gray-600 body-font">
       <div className="container mx-auto flex px-5 py-24 flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl font-medium text-gray-900">
-          Portfolio: {projects.results.length + projects2.results.length}
+          Portfolio: {projects.results?.length + projects2.results.length}
         </h1>
       </div>
       <div className="flex flex-col md:block">
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap justify-center -m-4 ">
-            {/* {projects.results.map((v) => (
+            {projects.results.map((v: IProjectData) => (
               <ProjectItem key={v.id} data={v} />
-            ))} */}
+            ))}
           </div>
         </div>
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap justify-center -m-4">
-            {projects2.results.map((v: ICloneData, i: number) => (
-              <CloneItem key={i} data={v} />
+            {projects2.results.map((v: ICloneData) => (
+              <CloneItem key={v.id} data={v} />
             ))}
           </div>
         </div>
