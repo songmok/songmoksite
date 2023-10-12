@@ -51,7 +51,7 @@ export default function CloneItem({ data }: { data: ICloneData }) {
               priority
               width={1920}
               height={960}
-              alt="content"
+              alt={title}
             />
           </a>
           <h3 className="tracking-widest text-indigo-500 dark:text-slate-600 text-xs font-medium title-font mb-4 mt-4">

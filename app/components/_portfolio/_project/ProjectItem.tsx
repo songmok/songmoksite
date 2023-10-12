@@ -4,6 +4,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { IProjectData } from "../../../portfolio/page";
 
 const ProjectItem = ({ data }: { data: IProjectData }) => {
+  console.log("data", data);
   const title = data.properties.Name.title[0].text.content;
   const siteUrl = data.url;
   const imgUrl = data.cover?.external?.url || data.cover?.file?.url;
@@ -30,10 +31,10 @@ const ProjectItem = ({ data }: { data: IProjectData }) => {
             width={1920}
             priority
             height={960}
-            alt="content"
+            alt={title}
           />
         </a>
-        <h3 className="tracking-widest text-indigo-500 dark:text-slate-600 text-xs font-medium title-font mb-4 mt-4">
+        <h3 className="tracking-widest dark:text-slate-600 text-xs font-medium title-font mb-4 mt-4">
           {tags.map((item, num) => (
             <span
               key={num}

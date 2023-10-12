@@ -7,6 +7,7 @@ const nextConfig = {
     domains: [
       "localhost:3000",
       "songmok.site",
+      "images.unsplash.com",
       "prod-files-secure.s3.us-west-2.amazonaws.com",
       "s3.us-west-2.amazonaws.com",
       "www.notion.so",
@@ -14,13 +15,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "prod-files-secure.s3.us-west-2.amazonaws.com",
+        hostname: "s3.us-west-2.amazonaws.com",
         port: "",
         pathname: "/secure.notion-static.com/**",
       },
       {
         protocol: "https",
-        hostname: "s3.us-west-2.amazonaws.com",
+        hostname: "prod-files-secure.s3.us-west-2.amazonaws.com",
         port: "",
         pathname: "/secure.notion-static.com/**",
       },

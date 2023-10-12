@@ -27,7 +27,7 @@ p {
 }
 
 .btn-project-index {
-  @apply inline-flex text-white dark:text-slate-300 bg-slate-500 dark:bg-slate-400 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg;
+  @apply inline-flex bg-slate-500 dark:bg-slate-400 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg text-white dark:hover:bg-slate-50 dark:hover:text-sky-600;
 }
 
 .btn-project {
@@ -40,7 +40,7 @@ p {
   hover:scale-105
   hover:shadow-lg
   dark:hover:shadow-gray-400/40
-  hover:text-blue-600
+
   text-slate-900 dark:text-slate-500;
 }
 .tag {

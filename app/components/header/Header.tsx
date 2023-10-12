@@ -11,7 +11,7 @@ export default function Header() {
     <header className="text-gray-600 body-font relative">
       {!mobile ? (
         <>
-          <div className="container mx-auto  p-5  ">
+          <div className="container mx-auto  p-5 ">
             <div className="flex justify-between mx-auto items-center mb-10">
               <Link
                 className="flex title-font font-medium text-gray-900"
