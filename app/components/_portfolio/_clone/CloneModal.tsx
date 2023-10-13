@@ -23,8 +23,8 @@ const CloneModal: React.FC<ICloneModal> = ({
         <Modal
           isOpen={true}
           onRequestClose={closeModal}
-          className="fixed rounded-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900 p-16 rounded-8 flex flex-col items-center justify-center overflow-hidden border border-white"
-          overlayClassName="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center"
+          className="fixed rounded-md top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900 p-16 rounded-8 flex flex-col items-center justify-center overflow-hidden border border-white w-8/12"
+          overlayClassName="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center "
         >
           <button
             className="absolute top-2 right-2 text-red-500 text-2xl cursor-pointer transform hover:scale-125 transition-transform duration-200"
@@ -47,7 +47,7 @@ const CloneModal: React.FC<ICloneModal> = ({
           </button>
 
           <h2 className="text-xl font-bold mb-4">{title}</h2>
-          <div className="flex justify-center mt-4">
+          <div className="flex w-10/12 justify-center mt-4">
             <iframe src={RepEmb} width="600" height="400" />
           </div>
           <div className="flex justify-around mt-12 w-full">
