@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "프론트엔드 개발자 오한수 포트폴리오",
   description: "프론트엔드 개발자 포트폴리오입니다.",
   keywords:
-    "React.js, Next.js, portflio, 오한수, 프론트엔드, 웹, 앱, 개발자, 개발",
+    "React.js, Next.js, portfolio, ,포트폴리오, 오한수, 프론트엔드, 웹, 앱, 개발자, 개발",
 };
 
 export default function RootLayout({
