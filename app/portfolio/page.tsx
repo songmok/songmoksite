@@ -3,7 +3,7 @@ import CloneItem from "../components/_portfolio/_clone/CloneItem";
 import ProjectItem from "../components/_portfolio/_project/ProjectItem";
 
 export type ICloneData = {
-  url?: string;
+  url: string;
   properties: IProperties;
   RepUrl: string;
   GitUrl: string;
@@ -12,11 +12,11 @@ export type ICloneData = {
   id: number;
 };
 export type IProjectData = {
-  url?: string;
+  id: number;
+  url: string;
   properties: IProperties;
   GitUrl: string;
   cover: ICover;
-  id: number;
 };
 type ICover = {
   file: { url: string };
@@ -48,7 +48,23 @@ type IProperties = {
   Tags: {
     multi_select: { id: string; name: string; color: string }[];
   };
+  description: {
+    rich_text: {
+      plain_text: string;
+    }[];
+  };
+  team: {
+    rich_text: {
+      plain_text: string;
+    }[];
+  };
+  descMob: {
+    rich_text: {
+      plain_text: string;
+    }[];
+  };
 };
+
 export type ILength = {
   imgLength: number;
 };
@@ -101,7 +117,9 @@ export default async function Portfolio() {
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap justify-center -m-4 ">
             {projects.results.map((v: IProjectData, i: number) => (
-              <ProjectItem key={v.id} data={v} length={i} />
+              <div key={v.id} className="w-full md:w-1/2 mb-8 p-4">
+                <ProjectItem data={v} length={i} />
+              </div>
             ))}
           </div>
         </div>
@@ -113,7 +131,9 @@ export default async function Portfolio() {
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap justify-center -m-4">
             {projects2.results.map((v: ICloneData, i: number) => (
-              <CloneItem key={v.id} data={v} length={i} />
+              <div key={v.id} className="w-full md:w-1/2 mb-8 p-4">
+                <CloneItem key={v.id} data={v} length={i} />
+              </div>
             ))}
           </div>
         </div>

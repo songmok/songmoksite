@@ -1,11 +1,12 @@
 "use client";
+import Link from "next/link";
 import Modal from "react-modal";
 
 export interface ICloneModal {
   RepEmb: string;
   RepUrl: string;
   title: string;
-  siteUrl?: string;
+  siteUrl: string;
   closeModal: () => void;
   ModalOpen: boolean;
 }
@@ -45,26 +46,25 @@ const CloneModal: React.FC<ICloneModal> = ({
               <line x1="6" y1="6" x2="18" y2="18"></line>
             </svg>
           </button>
-
           <h2 className="text-xl font-bold mb-4">{title}</h2>
           <div className="flex w-10/12 justify-center mt-4">
             <iframe src={RepEmb} width="600" height="400" />
           </div>
           <div className="flex justify-around mt-12 w-full">
-            <a
+            <Link
               href={siteUrl}
               target="_blank"
               className="px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-500 dark:text-gray-100 block border hover:border-gray-300 dark:hover:text-gray-50 hover:text-gray-50 text-gray-100"
             >
               자세히 보기
-            </a>
-            <a
+            </Link>
+            <Link
               href={RepUrl}
               target="_blank"
               className="px-4 py-2 rounded-md bg-gray-800 hover:bg-gray-500 dark:text-gray-100 block border hover:border-gray-300 dark:hover:text-gray-50 hover:text-gray-50 text-gray-100"
             >
               사이트 바로가기
-            </a>
+            </Link>
           </div>
         </Modal>
       )}
