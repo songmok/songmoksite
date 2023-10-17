@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { IProjectData } from "../../../portfolio/page";
 
-const ProjectItem = ({ data }: { data: IProjectData }) => {
+const ProjectItem = ({
+  data,
+  length,
+}: {
+  data: IProjectData;
+  length: number;
+}) => {
   console.log("data", data);
   const title = data.properties.Name.title[0].text.content;
   const siteUrl = data.url;
@@ -27,7 +33,7 @@ const ProjectItem = ({ data }: { data: IProjectData }) => {
         <a href={siteUrl} target="_blank" className="">
           <Image
             className="h-40 rounded w-full object-cover object-center mb-14"
-            src={imgUrl}
+            src={`/img/project/main${length}.png`}
             width={1920}
             priority
             height={960}

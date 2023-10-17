@@ -5,7 +5,7 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     domains: [
-      "localhost:3000",
+      "localhost:5000",
       "songmok.site",
       "images.unsplash.com",
       "prod-files-secure.s3.us-west-2.amazonaws.com",
@@ -30,7 +30,7 @@ const nextConfig = {
   server: {
     webSocketProxy: {
       path: "/_next/webpack-hmr",
-      target: "http://localhost:5000",
+      target: "http://localhost:8000",
       ws: true,
     },
   },

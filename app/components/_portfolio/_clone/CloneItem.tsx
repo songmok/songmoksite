@@ -6,7 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ICloneData } from "../../../portfolio/page";
 
-export default function CloneItem({ data }: { data: ICloneData }) {
+export default function CloneItem({
+  data,
+  length,
+}: {
+  data: ICloneData;
+  length: number;
+}) {
   const gitUrl = data.properties.Git.url;
   const title = data.properties.Name.title[0].plain_text;
   const siteUrl = data.url;
@@ -47,7 +53,7 @@ export default function CloneItem({ data }: { data: ICloneData }) {
           >
             <Image
               className="h-40 rounded w-full object-cover object-center mb-14"
-              src={imgUrl}
+              src={`/img/project/clone${length}.png`}
               priority
               width={1920}
               height={960}

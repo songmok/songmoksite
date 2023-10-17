@@ -49,7 +49,9 @@ type IProperties = {
     multi_select: { id: string; name: string; color: string }[];
   };
 };
-
+export type ILength = {
+  imgLength: number;
+};
 export default async function Portfolio() {
   const options = {
     method: "POST",
@@ -98,8 +100,8 @@ export default async function Portfolio() {
         </div>
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap justify-center -m-4 ">
-            {projects.results.map((v: IProjectData) => (
-              <ProjectItem key={v.id} data={v} />
+            {projects.results.map((v: IProjectData, i: number) => (
+              <ProjectItem key={v.id} data={v} length={i} />
             ))}
           </div>
         </div>
@@ -110,8 +112,8 @@ export default async function Portfolio() {
         </div>
         <div className="container px-5 py-5 mx-auto">
           <div className="flex flex-wrap justify-center -m-4">
-            {projects2.results.map((v: ICloneData) => (
-              <CloneItem key={v.id} data={v} />
+            {projects2.results.map((v: ICloneData, i: number) => (
+              <CloneItem key={v.id} data={v} length={i} />
             ))}
           </div>
         </div>
