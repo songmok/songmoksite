@@ -18,8 +18,7 @@ export default function TistoryItem() {
   useEffect(() => {
     dispatch(cateData());
     dispatch(listData());
-  }, []);
-
+  }, [dispatch]);
   const ttCateArr = ttCate.categories.tistory?.item.categories;
   const ttlistArr = ttList.posts.tistory?.item.posts;
 
