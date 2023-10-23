@@ -22,6 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <ReduxProvider>
         <body className={inter.className}>
           <Providers>
