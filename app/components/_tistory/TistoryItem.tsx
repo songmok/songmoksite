@@ -3,7 +3,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import CateTt from "./CateTt";
 import ListTt from "./ListTt";
-import { AppDispatch, RootState } from "../../redux/store";
+import { AppDispatch } from "../../redux/store";
 import { listData } from "../../redux/features/listSlice";
 import { useEffect, useState } from "react";
 import { cateData } from "../../redux/features/cateSlice";
