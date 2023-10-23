@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import {
   BlogList,
   BlogName,
@@ -6,42 +6,38 @@ import {
   TtokenAndJson,
 } from "../../api/tistory";
 
-type postsA = {
+export type postsA = {
   id: string;
   title: string;
   date: string;
 };
-
 export type ListState = {
   status: string;
   posts: postsA[];
 };
 
 const initialState: ListState = {
-  status: "200",
-  posts: [
-    {
-      id: "",
-      title: "",
-      date: "",
-    },
-  ],
+  status: "",
+  posts: [],
 };
 
-export const listData = createAsyncThunk("listSlice/listData", async () => {
-  try {
-    const res = await fetch(
-      `${BlogList + TtokenAndJson + BlogName + PageNumber}`,
-      {
-        method: "GET",
-      }
-    );
-    const resData = await res.json();
-    return resData;
-  } catch (err) {
-    return err;
+export const listData = createAsyncThunk<postsA[]>(
+  "listSlice/listData",
+  async () => {
+    try {
+      const res = await fetch(
+        `${BlogList + TtokenAndJson + BlogName + PageNumber}`,
+        {
+          method: "GET",
+        }
+      );
+      const resData = await res.json();
+      return resData;
+    } catch (err) {
+      return err;
+    }
   }
-});
+);
 
 export const listSlice = createSlice({
   name: "listSlice",
@@ -52,7 +48,7 @@ export const listSlice = createSlice({
       .addCase(listData.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(listData.fulfilled, (state, action) => {
+      .addCase(listData.fulfilled, (state, action: PayloadAction<postsA[]>) => {
         state.status = "succeeded";
         state.posts = action.payload;
       })
