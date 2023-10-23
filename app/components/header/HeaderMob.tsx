@@ -24,9 +24,9 @@ const HeaderMob = () => {
           <Link className=" hover:text-gray-900" href="/portfolio">
             Portfolio
           </Link>
-          <Link className=" mr-5 hover:text-gray-900" href="/tistory">
+          {/* <Link className=" mr-5 hover:text-gray-900" href="/tistory">
             Tistory
-          </Link>
+          </Link> */}
           <Link className=" hover:text-gray-900" href="/life">
             Life
           </Link>
