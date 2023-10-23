@@ -11,23 +11,25 @@ import { ISliceType } from "../../redux/type/sliceType";
 
 export default function TistoryItem() {
   const dispatch = useDispatch<AppDispatch>();
-  const tTdata = useSelector((state: ISliceType) => state);
+  const ttCate = useSelector((state: ISliceType) => state.cateSlice);
+  const ttList = useSelector((state: ISliceType) => state.listSlice);
+
   const [cateNum, setCateNum] = useState<Number>(0);
   useEffect(() => {
     dispatch(cateData());
     dispatch(listData());
   }, []);
 
-  const catePage = tTdata.cateSlice.categories.tistory?.item.categories;
-  const listPage = tTdata.listSlice.posts.tistory?.item.posts;
+  const ttCateArr = ttCate.categories.tistory?.item.categories;
+  const ttlistArr = ttList.posts.tistory?.item.posts;
 
   return (
     <>
       <div>
-        {catePage?.map((v, i) => {
+        {ttCateArr?.map((v, i) => {
           return <CateTt cate={v} key={i} />;
         })}
-        {listPage?.map((v, i: number) => {
+        {ttlistArr?.map((v, i: number) => {
           return <ListTt list={v} key={i} />;
         })}
       </div>
