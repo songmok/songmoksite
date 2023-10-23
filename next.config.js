@@ -27,7 +27,7 @@ const nextConfig = {
       },
     ],
   },
-  server: {
+  serverRuntimeConfig: {
     webSocketProxy: {
       path: "/_next/webpack-hmr",
       target: "http://localhost:8000",

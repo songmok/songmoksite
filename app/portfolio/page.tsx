@@ -1,4 +1,4 @@
-import { TOKEN, DATABASE_ID, DATABASE_ID2 } from "../../config";
+import { TOKEN, DATABASE_ID, DATABASE_ID2, TISTORY_ACCES } from "../../config";
 import CloneItem from "../components/_portfolio/_clone/CloneItem";
 import ProjectItem from "../components/_portfolio/_project/ProjectItem";
 
@@ -64,7 +64,6 @@ type IProperties = {
     }[];
   };
 };
-
 export type ILength = {
   imgLength: number;
 };
