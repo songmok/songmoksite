@@ -34,6 +34,11 @@ const nextConfig = {
       ws: true,
     },
   },
+  compiler: {
+    styledComponents: {
+      displayName: false,
+    },
+  },
 };
 
 module.exports = nextConfig;

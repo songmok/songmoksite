@@ -1,15 +1,15 @@
-import { TOKEN, DATABASE_ID, DATABASE_ID2, TISTORY_ACCES } from "../../config";
+import { TOKEN, DATABASE_ID, DATABASE_ID2 } from "../../config";
 import CloneItem from "../components/_portfolio/_clone/CloneItem";
 import ProjectItem from "../components/_portfolio/_project/ProjectItem";
 
 export type ICloneData = {
+  id: number;
   url: string;
   properties: IProperties;
   RepUrl: string;
   GitUrl: string;
   ReplitUrl: string;
   cover: ICover;
-  id: number;
 };
 export type IProjectData = {
   id: number;
@@ -100,8 +100,8 @@ export default async function Portfolio() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto flex px-5 py-12 flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl font-medium text-gray-900">
-          Portfolio : {projects.results.length + projects2.results.length}
+        <h1 className="title-font sm:text-4xl text-3xl font-medium skytxt tracking-widest">
+          POTFOLIO
         </h1>
         <div className="container relative mt-12">
           <span className="absolute inset-x-0 bottom-0 after:block after:h-1 after:dark:bg-white after:bg-black"></span>

@@ -12,11 +12,12 @@
 - Next.js
 - TypeScript
 - TailWind
+- Ant Design
+- Redux-Toolik / Redux-Thunk
 
 ## 배포
 
 - [Vercel](https://vercel.com/)
-- [Work](https://vercel.com/)
 - [domaion](https://www.gabia.com/)
 
 ## 기존 소스
@@ -27,12 +28,9 @@
 
 - Next.js 13버전 코드 리팩토링
 - TypeScript 적용
+- Redux 적용 및 Tistory Api 적용과 페이지 생성
 
 ## 향후 업데이트
 
-- 전체적인 UI 개선 / 최우선으로 Home, portfoilo 페이지 개선 예정
-- tistory api 적용하여 블로그 연동
-
-## 버그
-
-- 현재 모바일에서 포트폴리오 페이지에 스터디 항목 커버 이미지가 나오지 않습니다.
+- Tistory 게시판 상세페이지 제작
+- Nest.js 게시판 연동

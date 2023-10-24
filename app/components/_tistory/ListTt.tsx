@@ -1,15 +1,23 @@
-import Link from "next/link";
+"use client";
+
 import { postsA } from "../../redux/features/listSlice";
-export default function ListTt({ list }: { list: postsA }) {
+
+import TableDark from "./TableDark";
+import TableLight from "./TableLight";
+export default function ListTt({
+  filterCateData,
+  themeDark,
+}: {
+  filterCateData: postsA[];
+  themeDark: any;
+}) {
   return (
-    <>
-      <Link href="/">
-        <ul>
-          <li>{list.id}</li>
-          <li>{list.title}</li>
-          <li>{list.date}</li>
-        </ul>
-      </Link>
-    </>
+    <div>
+      {themeDark === "dark" ? (
+        <TableDark filterCateData={filterCateData} />
+      ) : (
+        <TableLight filterCateData={filterCateData} />
+      )}
+    </div>
   );
 }

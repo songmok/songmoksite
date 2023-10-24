@@ -1,37 +1,61 @@
 "use client";
 
 import { useDispatch, useSelector } from "react-redux";
-import CateTt from "./CateTt";
-import ListTt from "./ListTt";
 import { AppDispatch } from "../../redux/store";
 import { listData } from "../../redux/features/listSlice";
 import { useEffect, useState } from "react";
 import { cateData } from "../../redux/features/cateSlice";
 import { ISliceType } from "../../redux/type/sliceType";
+import { useTheme } from "next-themes";
+import ListTt from "./ListTt";
+import CateTt from "./CateTt";
+import { Alert, Space, Spin } from "antd";
+import Loading from "../loading/Loading";
 
 export default function TistoryItem() {
   const dispatch = useDispatch<AppDispatch>();
-  const ttCate = useSelector((state: ISliceType) => state.cateSlice);
-  const ttList = useSelector((state: ISliceType) => state.listSlice);
-
-  const [cateNum, setCateNum] = useState<Number>(0);
+  const tTdata = useSelector((state: ISliceType) => state);
+  const { theme } = useTheme();
+  const [optionCate, setOptionCate] = useState<any>("all");
+  const catePage = tTdata.cateSlice.categories.tistory?.item.categories;
+  const listPage = tTdata.listSlice.posts.tistory?.item.posts;
+  const [mounted, setMounted] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    dispatch(cateData());
-    dispatch(listData());
+    async function fetchData() {
+      setLoading(true);
+      await dispatch(cateData());
+      await dispatch(listData());
+      setMounted(true);
+      setLoading(false);
+    }
+    fetchData();
   }, [dispatch]);
-  const ttCateArr = ttCate.categories.tistory?.item.categories;
-  const ttlistArr = ttList.posts.tistory?.item.posts;
+
+  const filterCateData =
+    optionCate === "all"
+      ? listPage
+      : listPage.filter((post) => post.categoryId === optionCate);
 
   return (
     <>
-      <div>
-        {ttCateArr?.map((v, i) => {
-          return <CateTt cate={v} key={i} />;
-        })}
-        {ttlistArr?.map((v, i: number) => {
-          return <ListTt list={v} key={i} />;
-        })}
-      </div>
+      <article className="flex flex-col">
+        {loading ? (
+          <>
+            <Loading />
+          </>
+        ) : (
+          <div>
+            <CateTt
+              optionCate={optionCate}
+              setOptionCate={setOptionCate}
+              catePage={catePage}
+            />
+            <ListTt filterCateData={filterCateData} themeDark={theme} />
+          </div>
+        )}
+        {/* <ListTt filterCateData={filterCateData} themeDark={theme} /> */}
+      </article>
     </>
   );
 }

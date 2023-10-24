@@ -20,8 +20,10 @@ export default function CloneItem({
   // const imgUrl = data.cover?.external?.url || data.cover?.file?.url;
   const RepUrl = data.properties.Replit.url;
   const tags = data.properties.Tags.multi_select;
+  const desc = data.properties;
   const RepEmb: string = RepUrl + "?embed=1";
 
+  console.log("desc", desc);
   const [ModalOpen, setModalOpen] = useState(false);
   const openModal = () => {
     setModalOpen(true);
@@ -81,6 +83,11 @@ export default function CloneItem({
             >
               <FontAwesomeIcon icon={faGithub} className="w-5" />
             </Link>
+          </div>
+          <div className="mt-5 mb-5">
+            <span className="text-base block text-cyan-100 pb-5 dark:text-cyan-900">
+              {/* {desc} */}
+            </span>
           </div>
         </div>
       </div>

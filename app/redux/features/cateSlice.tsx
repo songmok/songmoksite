@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import { BlogCate, BlogName, TtokenAndJson } from "../../api/tistory";
+import { BlogCate, BlogName, TtokenAndJson } from "../../../config";
+
 export type ICate = {
   id: string;
   parent: string;

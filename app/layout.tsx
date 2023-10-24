@@ -5,7 +5,7 @@ import { Providers } from "./Providers";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import { ReduxProvider } from "./ReduxProvider";
-
+import StyledComponentsRegistry from "./AntdProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,15 +25,17 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <ReduxProvider>
-        <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <ReduxProvider>
           <Providers>
-            <Header />
-            {children}
-            <Footer />
+            <StyledComponentsRegistry>
+              <Header />
+              {children}
+              <Footer />
+            </StyledComponentsRegistry>
           </Providers>
-        </body>
-      </ReduxProvider>
+        </ReduxProvider>
+      </body>
     </html>
   );
 }

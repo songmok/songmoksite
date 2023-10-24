@@ -1,15 +1,12 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import {
-  BlogList,
-  BlogName,
-  PageNumber,
-  TtokenAndJson,
-} from "../../api/tistory";
+import { BlogList, BlogName, PageNumber, TtokenAndJson } from "../../../config";
 
 export type postsA = {
   id: string;
   title: string;
   date: string;
+  categoryId: string;
+  postUrl: string;
 };
 export type ListState = {
   status: string;

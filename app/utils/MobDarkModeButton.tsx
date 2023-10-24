@@ -17,7 +17,7 @@ const MobDarkModeButton = () => {
   const sun = { color: "white" };
   return (
     <button
-      onClick={(e) => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
+      onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}
     >
       {theme === "dark" ? <FaSun style={sun} /> : <FaMoon />}
     </button>
