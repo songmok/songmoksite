@@ -9,7 +9,6 @@ import { ISliceType } from "../../redux/type/sliceType";
 import { useTheme } from "next-themes";
 import ListTt from "./ListTt";
 import CateTt from "./CateTt";
-import { Alert, Space, Spin } from "antd";
 import Loading from "../loading/Loading";
 
 export default function TistoryItem() {
