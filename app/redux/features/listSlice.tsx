@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { BlogList, BlogName, PageNumber, TtokenAndJson } from "../../../config";
 
-export type postsA = {
+export type IPost = {
   id: string;
   title: string;
   date: string;
@@ -10,7 +10,7 @@ export type postsA = {
 };
 export type ListState = {
   status: string;
-  posts: postsA[];
+  posts: IPost[];
 };
 
 const initialState: ListState = {
@@ -18,7 +18,7 @@ const initialState: ListState = {
   posts: [],
 };
 
-export const listData = createAsyncThunk<postsA[]>(
+export const listData = createAsyncThunk<IPost[]>(
   "listSlice/listData",
   async () => {
     try {
@@ -45,7 +45,7 @@ export const listSlice = createSlice({
       .addCase(listData.pending, (state) => {
         state.status = "loading";
       })
-      .addCase(listData.fulfilled, (state, action: PayloadAction<postsA[]>) => {
+      .addCase(listData.fulfilled, (state, action: PayloadAction<IPost[]>) => {
         state.status = "succeeded";
         state.posts = action.payload;
       })

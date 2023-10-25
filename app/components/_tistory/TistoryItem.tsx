@@ -53,7 +53,6 @@ export default function TistoryItem() {
             <ListTt filterCateData={filterCateData} themeDark={theme} />
           </div>
         )}
-        {/* <ListTt filterCateData={filterCateData} themeDark={theme} /> */}
       </article>
     </>
   );

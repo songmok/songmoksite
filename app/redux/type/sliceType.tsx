@@ -1,5 +1,4 @@
-import React from "react";
-import { postsA } from "../features/listSlice";
+import { IPost } from "../features/listSlice";
 import { ICate } from "../features/cateSlice";
 
 export type ISliceType = {
@@ -8,7 +7,7 @@ export type ISliceType = {
       tistory: {
         status: string;
         item: {
-          posts: postsA[];
+          posts: IPost[];
         };
       };
     };

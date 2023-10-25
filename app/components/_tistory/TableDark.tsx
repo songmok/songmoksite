@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ConfigProvider, Table, theme } from "antd";
 import type { ColumnsType } from "antd/es/table";
-import { postsA } from "../../redux/features/listSlice";
+import { IPost } from "../../redux/features/listSlice";
 import Link from "next/link";
 export default function TableLight({
   filterCateData,
 }: {
-  filterCateData: postsA[];
+  filterCateData: IPost[];
 }) {
-  const columns: ColumnsType<postsA> = [
+  useEffect(() => {
+    setPagination((pageSize) => ({
+      ...pageSize,
+      total: filterCateData?.length,
+    }));
+  }, [filterCateData]);
+  const columns: ColumnsType<IPost> = [
     {
       title: "Id",
       dataIndex: "id",

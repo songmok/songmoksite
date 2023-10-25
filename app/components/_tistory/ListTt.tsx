@@ -1,6 +1,6 @@
 "use client";
 
-import { postsA } from "../../redux/features/listSlice";
+import { IPost } from "../../redux/features/listSlice";
 
 import TableDark from "./TableDark";
 import TableLight from "./TableLight";
@@ -8,7 +8,7 @@ export default function ListTt({
   filterCateData,
   themeDark,
 }: {
-  filterCateData: postsA[];
+  filterCateData: IPost[];
   themeDark: any;
 }) {
   return (
