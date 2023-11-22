@@ -3,7 +3,7 @@ export const DATABASE_ID2 = process.env.NOTION_DATABASE_ID2;
 export const TOKEN = process.env.NOTION_TOKEN;
 export const TISTORY_APP = process.env.TISTORY_APP_ID;
 export const TISTORY_SCT = process.env.TISTORY_SECRET_KEY;
-export const TtokenAndJson = `?access_token=7aa6b49411700399bcca1a3189d54ad2_a515b9d8911d44f7f82f805e99b35ee4&output=json`;
+export const TtokenAndJson = `?access_token=${process.env.TISTORY_TK}&output=json`;
 export const BlogName = "&blogName=songmok-blog";
 export const PageNumber = "&page=1";
 export const BlogInfo = "https://www.tistory.com/apis/blog/info";

@@ -39,6 +39,9 @@ const nextConfig = {
       displayName: false,
     },
   },
+  env: {
+    TISTORY_TK: process.env.TISTORY_TOKEN,
+  },
 };
 
 module.exports = nextConfig;

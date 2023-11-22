@@ -1,7 +1,8 @@
 import TistoryItem from "../components/_tistory/TistoryItem";
 import { BlogInfo, BlogName, TtokenAndJson } from "../../config";
 import Link from "next/link";
-
+import dotenv from "dotenv";
+dotenv.config();
 export default async function Tistory() {
   const option = { method: "GET" };
   const bgInfoData = await fetch(
