@@ -21,9 +21,10 @@ const HeaderWeb = () => {
         <Link className=" mr-5 hover:text-gray-900" href="/portfolio">
           Portfolio
         </Link>
-        <Link className=" mr-5 hover:text-gray-900" href="/tistory">
+        {/* TISTORY 수정 */}
+        {/* <Link className=" mr-5 hover:text-gray-900" href="/tistory">
           Tistory
-        </Link>
+        </Link> */}
         <Link className=" mr-5 hover:text-gray-900" href="/life">
           Life
         </Link>
