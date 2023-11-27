@@ -40,8 +40,7 @@ const nextConfig = {
     },
   },
   env: {
-    TISTORY_TK:
-      "7aa6b49411700399bcca1a3189d54ad2_a515b9d8911d44f7f82f805e99b35ee4",
+    TISTORY_TK: process.env.TISTORY_TOKEN,
   },
 };
 

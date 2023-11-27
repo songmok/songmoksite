@@ -10,7 +10,8 @@ export default async function Tistory() {
     option
   );
   const bgInfo = await bgInfoData.json();
-  const ttBgInfo = bgInfo.tistory.item.blogs[1];
+  const ttBgInfo = bgInfo.tistory.item.blogs[2];
+  console.log("tt", ttBgInfo);
   const bgName = ttBgInfo.name;
   const bgBig = bgName.toUpperCase();
   return (
