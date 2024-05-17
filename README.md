@@ -34,3 +34,5 @@
 
 - Tistory 게시판 상세페이지 제작
 - Nest.js 게시판 연동
+![2](https://github.com/songmok/songmoksite/assets/118712217/eb97bec5-db30-482c-a34c-1b524213b6de)
+
