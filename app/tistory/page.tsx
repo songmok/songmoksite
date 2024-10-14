@@ -26,7 +26,7 @@ export default async function Tistory() {
           <span className="absolute inset-x-0 bottom-0 after:block after:h-1 after:dark:bg-white after:bg-black"></span>
         </div>
       </div>
-      <TistoryItem />
+      {/* <TistoryItem /> */}
     </main>
   );
 }

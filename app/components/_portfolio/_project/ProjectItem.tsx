@@ -27,7 +27,7 @@ const ProjectItem = ({
   const calcDate = (start: string | Date, end: string | Date): number => {
     start = typeof start === "string" ? new Date(start) : start;
     end = typeof end === "string" ? new Date(end) : end;
-    const mathDate = Math.abs(end.getTime() - start.getTime());
+    const mathDate = Math.abs(end?.getTime() - start.getTime());
     const result = mathDate / (1000 * 60 * 60 * 24);
     return result;
   };
