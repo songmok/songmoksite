@@ -103,6 +103,23 @@ const Stacks = () => {
                 </p>
               </div>
             </div>
+            <div className="flex flex-col w-full lg:w-1/2 mb-10 lg:items-start items-center px-4">
+              <div className="flex-grow">
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+                  DB(MySQL)
+                </h2>
+                <p className="leading-relaxed text-base">
+                  - 이커머스 DB 팀 프로젝트 진행한 경험이 있습니다
+                  <br />
+                  - explain으로 쿼리 실행계획을 보고 성능 개선한 경험이 있습니다
+                  <br />- JOIN문으로 테이블 간 연계 가능합니다
+                  <br />- ERD로 테이블 설계 및 정규화와 반정규화한 경험이
+                  있습니다
+                  <br />- 더미 데이터와 프로시저로 DB단에서 성능 테스트를 하고
+                  성능 개선한 경험이 있습니다
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
